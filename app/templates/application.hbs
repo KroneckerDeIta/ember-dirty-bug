@@ -1,0 +1,11 @@
+<button type="button" {{on "click" this.saveComment}}>Save a comment</button>
+{{#if this.comment}}
+    <button type="button" {{on "click" this.makeDirty}}>Become Dirty</button>
+    <p>this.comment.message: {{this.comment.message}}</p>
+    <p>this.comment.hasDirtyAttributes: {{this.comment.hasDirtyAttributes}}</p>
+    <p>this.comment._internalModel.currentState.isDirty: {{this.comment._internalModel.currentState.isDirty}}</p>
+    <p>this.comment.currentState.isDirty: {{this.comment.currentState.isDirty}}</p>
+    <p>this.comment.___recordState.isDirty: {{this.comment.___recordState.isDirty}}</p>
+{{/if}}
+
+{{outlet}}
