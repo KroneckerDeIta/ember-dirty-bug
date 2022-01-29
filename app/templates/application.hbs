@@ -2,10 +2,25 @@
 {{#if this.comment}}
     <button type="button" {{on "click" this.makeDirty}}>Become Dirty</button>
     <p>this.comment.message: {{this.comment.message}}</p>
-    <p>this.comment.hasDirtyAttributes: {{this.comment.hasDirtyAttributes}}</p>
-    <p>this.comment._internalModel.currentState.isDirty: {{this.comment._internalModel.currentState.isDirty}}</p>
-    <p>this.comment.currentState.isDirty: {{this.comment.currentState.isDirty}}</p>
-    <p>this.comment.___recordState.isDirty: {{this.comment.___recordState.isDirty}}</p>
+    <hr>
+    <p>this.comment.hasDirtyAttributes: 
+        <span style="color:blue;">{{this.comment.hasDirtyAttributes}}</span>
+    </p>
+    <hr>
+    <p>this.comment._internalModel.currentState.isDirty:
+        <span style="color:blue;">{{this.comment._internalModel.currentState.isDirty}}</span>
+    </p>
+    {{#if this.comment._internalModel.currentState.isDirty}}
+        <p style="color:red;">The field above is only one that became dirty and hasDirtyAttributes didn't.</p>
+    {{/if}}
+    <hr>
+    <p>this.comment.currentState.isDirty: 
+        <span style="color:blue;">{{this.comment.currentState.isDirty}}</span>
+    </p>
+    <hr>
+    <p>this.comment.___recordState.isDirty:
+        <span style="color:blue;">{{this.comment.___recordState.isDirty}}</span>
+    </p>
 {{/if}}
 
 {{outlet}}
