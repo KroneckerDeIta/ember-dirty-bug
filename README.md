@@ -1,5 +1,16 @@
 # ember-dirty-bug
 
+`npm start`
+
+Navigate to localhost:4200
+
+Click "Save a comment"
+Click "Become Dirty"
+
+See that it doesn't have dirty attributes, but the internal model is dirty.
+
+
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
